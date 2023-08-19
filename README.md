@@ -8,8 +8,8 @@ Some of them may be opinionated, others may be the only way to achieve things.
 
 | Description | Links |
 |-----|-----|
-| Compund Components | [GitHub](./compound-components/src/main.svelte) |
-| Storable Store | [GitHub](./storable-store/src/main.svelte) |
+| Compund Components | [GitHub](./compound-components/README.md) |
+| Storable Store | [GitHub](./storable-store/README.md) |
 
 ---
 
