@@ -15,8 +15,8 @@ Some of them may be opinionated, others may be the only way to achieve things.
 
 How can you propose a pattern?
 
-- Open a new issue using the [propose pattern template] and elaborate.
-- Invite community to discuss
+- [Open a new issue](https://github.com/tncrazvan/svelte-patterns/issues/new/choose) using the propose pattern template and elaborate.
+- Invite community to discuss.
 
 ### Looking for other maintainers
 
