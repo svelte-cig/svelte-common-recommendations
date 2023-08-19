@@ -15,7 +15,7 @@ A clear and concise description of what the problem you're trying to solve is.
 
 Links or snippets of code where you demonstrate the pattern.
 
-**Ho often do you find yourself using this pattern?**
+**How often do you find yourself using this pattern?**
 
 - [ ] often
 - [ ] sometimes
