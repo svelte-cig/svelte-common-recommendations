@@ -28,11 +28,11 @@ If more than 1 week passes without a response send another email.
 
 ### SvelteKit
 
-**These are not patterns specific to [SvelteKit](https://github.com/sveltejs/kit), these are pure Svelte patterns.**
+**These are not patterns for  [SvelteKit](https://kit.svelte.dev/), these patterns for [Svelte](https://svelte.dev/).**
 
-### Can I run the project locally?
+# Run locally
 
-Yes
+You can run the project locally and try the patterns for yourself.
 
 ```sh
 git clone git@github.com:tncrazvan/svelte-patterns.git
@@ -41,9 +41,8 @@ npm i
 npm run dev
 ```
 
----
 
-### [Zen](https://ziglang.org/documentation/master/#Zen)
+# [Zen](https://ziglang.org/documentation/master/#Zen)
 - Communicate intent precisely.
 - Edge cases matter.
 - Favor reading code over writing code.
