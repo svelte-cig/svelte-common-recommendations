@@ -4,6 +4,10 @@ The following are some examples of recommendations and common patterns in svelte
 
 Some may be opinionated, others may be the only way to achieve things.
 
+> **Note**
+> 
+> All patterns and recommendations are meant for [Svelte](https://svelte.dev/), not for [SvelteKit](https://kit.svelte.dev/).
+
 ### Table of contents
 
 | Description | Links |
@@ -25,10 +29,6 @@ If you're eager to help maintain this project and want direct access to the repo
 I'll try to answer within 2-3 days.
 
 If more than 1 week passes without a response send another email.
-
-### SvelteKit
-
-**These are not patterns for  [SvelteKit](https://kit.svelte.dev/), these are patterns for [Svelte](https://svelte.dev/).**
 
 # Run locally
 
