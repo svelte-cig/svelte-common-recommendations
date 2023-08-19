@@ -30,6 +30,17 @@ If more than 1 week passes without a response send another email.
 
 **These are not patterns specific to [SvelteKit](https://github.com/sveltejs/kit), these are pure Svelte patterns.**
 
+### Can I run the project locally?
+
+Yes
+
+```sh
+git clone git@github.com:tncrazvan/svelte-patterns.git
+cd svelte-patterns
+npm i
+npm run dev
+```
+
 ---
 
 ### [Zen](https://ziglang.org/documentation/master/#Zen)
