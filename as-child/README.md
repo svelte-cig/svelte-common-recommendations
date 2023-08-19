@@ -40,3 +40,7 @@ When using components, we sometimes want an HTML element to be replaced with a c
   <TooltipPortal>...</TooltipPortal>
 </TooltipRoot>
 ```
+
+---
+
+Original proposal can be found [here](https://github.com/svelte-cig/svelte-common-recommendations/issues/1).
