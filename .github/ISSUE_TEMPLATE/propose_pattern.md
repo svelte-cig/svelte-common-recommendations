@@ -6,3 +6,24 @@ labels: pattern
 assignees: ''
 
 ---
+
+**What problem does this pattern solve**
+
+A clear and concise description of what the problem you're trying to solve is.
+
+**Links to some code demonstrations (at least one)**
+
+
+**Ho often do you find yourself using this pattern?**
+
+- [ ] often
+- [ ] sometimes
+- [ ] not very often, but when I do it is very handy
+
+
+**Is this an expansion of an already existing pattern?**
+
+- [ ] yes
+- [ ] no
+
+**Which pattern is it expanding?**
