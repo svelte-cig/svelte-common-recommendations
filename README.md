@@ -1,8 +1,8 @@
-# Svelte Patterns
+# Svelte Common Recommendations (SCR)
 
-The following are some examples of common patterns in svelte.
+The following are some examples of recommendations and common patterns in svelte.
 
-Some of them may be opinionated, others may be the only way to achieve things.
+Some may be opinionated, others may be the only way to achieve things.
 
 ### Table of contents
 
