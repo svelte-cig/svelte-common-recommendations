@@ -11,19 +11,23 @@ assignees: ''
 
 A clear and concise description of what the problem you're trying to solve is.
 
-**Links to some code demonstrations (at least one)**
+**Demonstrations**
 
+Links or snippets of code where you demonstrate the pattern.
 
 **Ho often do you find yourself using this pattern?**
 
 - [ ] often
 - [ ] sometimes
-- [ ] not very often, but when I do it is very handy
+- [ ] not very often, but when I do it is useful
 
 
-**Is this an expansion of an already existing pattern?**
+**Is this an expansion of an already existing pattern in this repository?**
 
 - [ ] yes
 - [ ] no
 
 **Which pattern is it expanding?**
+
+Name the pattern or link to it.
+
