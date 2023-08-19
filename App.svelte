@@ -27,6 +27,15 @@
 				},
 			],
 		},
+		{
+			description: 'As Child',
+			links: [
+				{
+					label: 'Local',
+					path: '/as-child/index.html',
+				},
+			],
+		},
 	]
 </script>
 

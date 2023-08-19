@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.btn {
+	@apply rounded-xl;
+}
 #main {
-  @apply fixed;
-  @apply left-0;
-  @apply right-0;
-  @apply top-0;
-  @apply bottom-0;
+	@apply fixed;
+	@apply left-0;
+	@apply right-0;
+	@apply top-0;
+	@apply bottom-0;
 }
