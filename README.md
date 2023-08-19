@@ -28,7 +28,7 @@ If more than 1 week passes without a response send another email.
 
 ### SvelteKit
 
-**These are not patterns for  [SvelteKit](https://kit.svelte.dev/), these patterns for [Svelte](https://svelte.dev/).**
+**These are not patterns for  [SvelteKit](https://kit.svelte.dev/), these are patterns for [Svelte](https://svelte.dev/).**
 
 # Run locally
 
