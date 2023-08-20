@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { spreadEvents } from './spreadEvents'
-	export let events: typeof spreadEvents
+	import { spreadEvents, type Events } from './spreadEvents'
+	export let events: Events = {}
 </script>
 
 <button use:spreadEvents={events}>

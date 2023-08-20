@@ -1,21 +1,18 @@
-type SpreadHTMLElementEventMap<K extends keyof HTMLElementEventMap> = Record<
-	K,
-	(this: HTMLElement, ev: HTMLElementEventMap[K]) => any
->
+export type Events<CustomEvents extends Record<string, Event> = {}> = HTMLElementEventMap | CustomEvents
 
-export function spreadEvents<K extends keyof HTMLElementEventMap>(
+export function spreadEvents<CustomEvents extends Record<string, Event> = {}>(
 	node: HTMLElement,
-	events: SpreadHTMLElementEventMap<K>
+	events: Events<CustomEvents>
 ) {
 	for (const key in events) {
-		const action = events[key as keyof SpreadHTMLElementEventMap<K>]
+		const action = events[key as keyof Events]
 		node.addEventListener(key, action)
 	}
 
 	return {
 		destroy() {
 			for (const key in events) {
-				const action = events[key as keyof SpreadHTMLElementEventMap<K>]
+				const action = events[key as keyof Events]
 				node.removeEventListener(key, action)
 			}
 		},

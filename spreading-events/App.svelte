@@ -1,11 +1,13 @@
-<!-- TODO: showcase implementation -->
 <script lang="ts">
 	import Button from './Button.svelte'
-	const events = {
-		onclick: () => console.log('Clicked'),
-		onmouseover: () => console.log('Hovered'),
-		onmycustomevent: () => console.log('My custom event has been triggered'),
+	import type { Events } from './spreadEvents'
+	const events: Events = {
+		click: () => console.log('Clicked'),
+		mouseover: () => console.log('Hovered'),
+		mycustomevent: () => console.log('My custom event has been triggered'),
 	}
 </script>
 
-<Button />
+<Button {events}>
+	<span>Click me</span>
+</Button>
