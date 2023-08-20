@@ -33,24 +33,24 @@ import { writable } from 'svelte/store'
  * @returns {import('svelte/store').Writable<T>}
  */
 export function storable(
-	storeName,
-	store,
-	options = {
-		serialize: x => JSON.stringify(x),
-		deserialize: x => JSON.parse(x),
-	}
+  storeName,
+  store,
+  options = {
+    serialize: x => JSON.stringify(x),
+    deserialize: x => JSON.parse(x),
+  }
 ) {
-	if (localStorage[storeName]) {
-		try {
-			store = options.deserialize(localStorage[storeName])
-		} catch (e) {
-			console.warn(e)
-		}
-	}
+  if (localStorage[storeName]) {
+    try {
+      store = options.deserialize(localStorage[storeName])
+    } catch (e) {
+      console.warn(e)
+    }
+  }
 
-	const result = writable(store)
-	result.subscribe($result => {
-		localStorage.setItem(storeName, options.serialize($result))
-	})
-	return result
+  const result = writable(store)
+  result.subscribe($result => {
+    localStorage.setItem(storeName, options.serialize($result))
+  })
+  return result
 }
