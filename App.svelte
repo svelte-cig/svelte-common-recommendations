@@ -27,6 +27,15 @@
 				},
 			],
 		},
+		{
+			description: 'Spreading Events',
+			links: [
+				{
+					label: 'Local',
+					path: '/spreading-events/index.html',
+				},
+			],
+		},
 	]
 </script>
 

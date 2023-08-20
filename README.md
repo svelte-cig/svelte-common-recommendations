@@ -14,6 +14,7 @@ Some may be opinionated, others may be the only way to achieve things.
 |-----|-----|
 | Compund Components | [GitHub](./compound-components/README.md) |
 | Storable Store | [GitHub](./storable-store/README.md) |
+| Spreading Events | [GitHub](./spreading-events/README.md) |
 
 ### Propose a pattern
 
