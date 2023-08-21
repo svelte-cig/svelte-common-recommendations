@@ -7,9 +7,9 @@ Publications you'll find in this repository are of different types
     A pattern will not provide concrete implementation of a solution.\
     Generally speaking patterns will be more verbose and more abstract, explaining in detail the reasons fore some choices over others.
 - **Recommendations**\
-    A recommendation is an implementation of a short solution to a problem.\
+    A recommendation is an implementation of a short solution to a problem.
 - **Library Recommendations**\
-    A list of recommended libraries that solve specific problems.\
+    A list of recommended libraries that solve specific problems.
 
 > **Note**\
 > Some problems may be showcased as both design patterns and recommendations.
