@@ -1,12 +1,27 @@
 # Svelte Common Recommendations (SCR)
 
-The following are some examples of recommendations and common patterns in svelte.
+Svelte Common Recommendations is a set of publications tackling common problems in svelte, offering solutions that otherwise would be too short to be published as libraries on their own.
 
-Some may be opinionated, others may be the only way to achieve things.
+Publications you'll find in this repository are of different types:
+
+1. Design patterns\
+    A [design pattern](https://it.wikipedia.org/wiki/Design_pattern) is an opinionated template of a solution.\
+    A pattern will not provide concrete implementation of a solution.\
+    Generally speaking patterns will be more verbose and more abstract, explaining in detail the reasons fore some choices over others.
+1. Recommendations\
+    A recommendation is an implementation of a short solution to a problem.\
+1. Library Recommendations
+    A list of recommended libraries that solve specific problems.\
+
+> **Note**\
+> Some problems may be showcased as both design patterns and recommendations.
+
 
 > **Note**
-> 
-> All patterns and recommendations are meant for [Svelte](https://svelte.dev/), not for [SvelteKit](https://kit.svelte.dev/).
+> All publications are meant for [Svelte](https://svelte.dev/), not for [SvelteKit](https://kit.svelte.dev/).
+
+
+All proposals are welcome, we have a [contribution guide](./CONTRIBUTING.md).
 
 ### Table of contents
 
@@ -14,32 +29,6 @@ Some may be opinionated, others may be the only way to achieve things.
 |-----|-----|
 | Compund Components | [GitHub](./compound-components/README.md) |
 | Storable Store | [GitHub](./storable-store/README.md) |
-
-### Propose a pattern
-
-How can you propose a pattern?
-
-- [Open a new issue](https://github.com/tncrazvan/svelte-patterns/issues/new/choose) using the propose pattern template and elaborate.
-- Invite community to discuss.
-
-### Looking for other maintainers
-
-If you're eager to help maintain this project and want direct access to the repository you can contact me at [tangent.jotey@gmail.com](tangent.jotey@gmail.com).
-
-I'll try to answer within 2-3 days.
-
-If more than 1 week passes without a response send another email.
-
-# Run locally
-
-You can run the project locally and try the patterns for yourself.
-
-```sh
-git clone git@github.com:tncrazvan/svelte-patterns.git
-cd svelte-patterns
-npm i
-npm run dev
-```
 
 
 # [Zen](https://ziglang.org/documentation/master/#Zen)
