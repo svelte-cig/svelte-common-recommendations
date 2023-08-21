@@ -27,6 +27,15 @@
         },
       ],
     },
+    {
+      description: 'Explicit Reactive Statements',
+      links: [
+        {
+          label: 'Local',
+          path: '/explicit-reactive-statements/index.html',
+        },
+      ],
+    },
   ]
 </script>
 
