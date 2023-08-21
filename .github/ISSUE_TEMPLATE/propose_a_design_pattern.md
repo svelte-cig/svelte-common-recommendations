@@ -7,10 +7,10 @@ assignees: ''
 
 ---
 
-**What problem does this design pattern solve?**
+# What problem does this design pattern solve?
 
 A clear and concise description of what the problem you're trying to solve is.
 
-**Design Pattern**
+# Design Pattern
 
 Elaborate on the design pattern.
