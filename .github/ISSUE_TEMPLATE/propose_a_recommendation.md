@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**What problem does this recommendation solve**
+**What problem does this recommendation solve?**
 
 A clear and concise description of what the problem you're trying to solve is.
 
