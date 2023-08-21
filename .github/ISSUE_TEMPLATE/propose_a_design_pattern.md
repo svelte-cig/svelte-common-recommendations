@@ -2,7 +2,7 @@
 name: Propose a design pattern
 about: Propose a design pattern to showcase
 title: 'Proposing Design Pattern: '
-labels: proposing design pattern
+labels: design pattern
 assignees: ''
 
 ---

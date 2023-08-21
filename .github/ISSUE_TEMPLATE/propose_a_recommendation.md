@@ -2,7 +2,7 @@
 name: Propose a recommendation
 about: Propose a recommendation
 title: 'Proposing Recommendation: '
-labels: proposing recommendation
+labels: recommendation
 assignees: ''
 
 ---
