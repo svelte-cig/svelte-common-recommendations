@@ -2,20 +2,6 @@
 
 Svelte Common Recommendations is a set of publications tackling common problems in svelte, offering solutions that otherwise would be too short to be published as libraries on their own.
 
-Publications you'll find in this repository are of different types
-
-- **Design patterns**\
-    A [design pattern](https://it.wikipedia.org/wiki/Design_pattern) is an opinionated template of a solution.\
-    A pattern will not provide concrete implementation of a solution.\
-    Generally speaking patterns will be more verbose and more abstract, explaining in detail the reasons fore some choices over others.
-- **Recommendations**\
-    A recommendation is an implementation of a short solution to a problem.\
-- **Library Recommendations**\
-    A list of recommended libraries that solve specific problems.\
-
-> **Note**\
-> Some problems may be showcased as both design patterns and recommendations.
-
 
 > **Note**
 > All publications are meant for [Svelte](https://svelte.dev/), not for [SvelteKit](https://kit.svelte.dev/).
