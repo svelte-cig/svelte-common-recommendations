@@ -7,7 +7,7 @@
     'state',
     writable({
       visible: false,
-    })
+    }),
   )
 </script>
 
