@@ -32,7 +32,12 @@
   <br />
   <p>Clicke the button to complete achievements.</p>
   <br />
-  <button disabled={!buttonEnabled} type="button" class="btn variant-filled-primary" on:click={increase}>
+  <button
+    disabled={!buttonEnabled}
+    type="button"
+    class="btn variant-filled-primary"
+    on:click={increase}
+  >
     <span>Click me ({counter})</span>
   </button>
 </div>
