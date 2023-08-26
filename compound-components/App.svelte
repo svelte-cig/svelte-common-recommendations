@@ -24,6 +24,8 @@
     <Section title="section-2" />
     <Section title="section-3" />
     <Section title="section-4" />
-    <LazySection title="this one defeats the point a bit but you can do it (and there are some use cases)" />
+    <LazySection
+      title="this one defeats the point a bit but you can do it (and there are some use cases)"
+    />
   {/await}
 </Card>

@@ -38,7 +38,7 @@ export function storable(
   options = {
     serialize: x => JSON.stringify(x),
     deserialize: x => JSON.parse(x),
-  }
+  },
 ) {
   if (localStorage[storeName]) {
     try {
