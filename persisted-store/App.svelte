@@ -1,28 +1,28 @@
 <script lang="ts">
-  import { createStore } from "./persistedStore";
-  import { onMount } from "svelte";
+  import { createStore } from './persistedStore'
+  import { onMount } from 'svelte'
 
   onMount(async () => {
-    const indexedDBValue = await indexedDBStore.getValue();
-    console.log({ indexedDBValue });
-  });
+    const indexedDBValue = await indexedDBStore.getValue()
+    console.log({ indexedDBValue })
+  })
 
   const indexedDBStore = createStore<string>({
-    storeName: "indexedDBStoreName",
-    initialValue: "hello",
-    storage: "indexedDB",
-  });
+    storeName: 'indexedDBStoreName',
+    initialValue: 'hello',
+    storage: 'indexedDB',
+  })
 
   const localStorageStore = createStore<string>({
-    storeName: "localStorageStoreName",
-    initialValue: "world",
-    storage: "localStorage",
-  });
+    storeName: 'localStorageStoreName',
+    initialValue: 'world',
+    storage: 'localStorage',
+  })
 
   const noStorageStore = createStore<string>({
-    storeName: "noStorageStoreName",
-    initialValue: "nothing persists here",
-  });
+    storeName: 'noStorageStoreName',
+    initialValue: 'nothing persists here',
+  })
 </script>
 
 <label class="label">

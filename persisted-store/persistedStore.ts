@@ -1,24 +1,33 @@
 import IndexedDBWrapper from './indexeddb-wrapper'
 
-// Single Indexeddb Client... It gets initialized only if any of the stores need it 
+// Single Indexeddb Client... It gets initialized only if any of the stores need it
 let indexedbInitialized = false
 let indexedDbWrapper: IndexedDBWrapper
 
-
 export type StoreOptions<T> = {
-  storeName: string,
-  initialValue: T,
+  storeName: string
+  initialValue: T
   storage?: 'indexedDB' | 'localStorage'
 }
 
-export function createStore<T>({ storeName, initialValue, storage }: StoreOptions<T>) {
-
+export function createStore<T>({
+  storeName,
+  initialValue,
+  storage,
+}: StoreOptions<T>) {
   // If any store requests indexedDB, and the client is not initialized yet, it will be initialized here.
   // It also checks if the browser supports indexedDB, if not, it reverts to localStorage
-  if (storage === 'indexedDB' && !indexedDbWrapper && typeof window !== 'undefined') {
+  if (
+    storage === 'indexedDB' &&
+    !indexedDbWrapper &&
+    typeof window !== 'undefined'
+  ) {
     if (!window?.indexedDB) storage = 'localStorage'
     else {
-      indexedDbWrapper = new IndexedDBWrapper('persistance-database', 'main-store')
+      indexedDbWrapper = new IndexedDBWrapper(
+        'persistance-database',
+        'main-store',
+      )
       indexedDbWrapper.init().then(() => (indexedbInitialized = true))
     }
   }
@@ -27,7 +36,7 @@ export function createStore<T>({ storeName, initialValue, storage }: StoreOption
   let storeValue: T = initialValue
 
   // Create subscribers Set to call them for any updates
-  const subscribers = new Set<(value: T) => void>();
+  const subscribers = new Set<(value: T) => void>()
 
   // This is to get the value of the store directly from the storage.
   // It is useful for stores that need to be accessed immediately before initialization finishes... for example in onMount.
@@ -42,7 +51,7 @@ export function createStore<T>({ storeName, initialValue, storage }: StoreOption
       if (!storage) {
         value = storeValue
       } else if (storage === 'indexedDB') {
-        // If the wrapper is not yet initialized, wait for it to be fully initialized before trying to read the data. 
+        // If the wrapper is not yet initialized, wait for it to be fully initialized before trying to read the data.
         if (!indexedbInitialized) await indexedDbWrapper.init()
         const persistedValue = await getIndexedDBStore<T>(storeName)
         value = persistedValue
@@ -56,20 +65,19 @@ export function createStore<T>({ storeName, initialValue, storage }: StoreOption
       // console.error(`Error at getValue function, store: ${storeName}.`, { error });
       return null
     }
-
   }
 
   const set = (value: T): void => {
     if (typeof window === 'undefined') return
 
-    storeValue = value;
+    storeValue = value
 
     // send the updated value to all the subscribers
     broadcastValue(value)
 
     // persist the data
     if (storage) persistStore(storeName, value, storage)
-  };
+  }
 
   // This function initializes the store and populates it with the persisted values
   async function init() {
@@ -79,7 +87,6 @@ export function createStore<T>({ storeName, initialValue, storage }: StoreOption
       await indexedDbWrapper.init()
       indexedbInitialized = true
     }
-
 
     const storedValue = await getValue()
 
@@ -95,31 +102,31 @@ export function createStore<T>({ storeName, initialValue, storage }: StoreOption
 
   // subscribe function with an unsubscribe function as a return
   const subscribe = (callback: (value: T) => void) => {
-    subscribers.add(callback);
-    callback(storeValue);
+    subscribers.add(callback)
+    callback(storeValue)
 
     return () => {
-      subscribers.delete(callback);
-    };
-  };
+      subscribers.delete(callback)
+    }
+  }
 
   // update function... used `structuredClone` to avoid mutations being made to the value argument of the callback from affecting the `storeValue`
 
   const update = (callback: (value: T) => T): void => {
-    const newValue = callback(structuredClone(storeValue));
+    const newValue = callback(structuredClone(storeValue))
     set(newValue)
-  };
+  }
 
-  // Function to broadcast any change to all subscribers 
+  // Function to broadcast any change to all subscribers
   function broadcastValue(value: T) {
-    subscribers.forEach((callback) => {
-      callback(value);
-    });
+    subscribers.forEach(callback => {
+      callback(value)
+    })
   }
 
   // optional but useful... this synchronous store.get() method can replace and outperform the built-in
   // svelte stores get(store) function... as it eliminates the need to subscribe and unsubscribe
-  // svelte get() can still work the same. 
+  // svelte get() can still work the same.
   function get() {
     return storeValue
   }
@@ -134,10 +141,13 @@ export function createStore<T>({ storeName, initialValue, storage }: StoreOption
   }
 }
 
-
 // Functions responsible for persisting the new values
 
-async function persistStore<T>(key: string, value: T, storage: 'localStorage' | 'indexedDB') {
+async function persistStore<T>(
+  key: string,
+  value: T,
+  storage: 'localStorage' | 'indexedDB',
+) {
   if (storage === 'indexedDB') await setIndexedDBStore<T>({ key, value })
   else setLocalStorageStore<T>({ key, value })
 }
@@ -149,11 +159,10 @@ async function getIndexedDBStore<T>(key: string): Promise<T | null> {
   return value
 }
 
-async function setIndexedDBStore<T>({ key, value }: { key: string, value: T }) {
-  const insertDocument = { id: key, value };
+async function setIndexedDBStore<T>({ key, value }: { key: string; value: T }) {
+  const insertDocument = { id: key, value }
   return indexedDbWrapper.set<T>(insertDocument)
 }
-
 
 function getLocalStorageStore<T>(key: string): T | null {
   try {
@@ -170,7 +179,7 @@ function getLocalStorageStore<T>(key: string): T | null {
   }
 }
 
-function setLocalStorageStore<T>({ key, value }: { key: string, value: T }) {
+function setLocalStorageStore<T>({ key, value }: { key: string; value: T }) {
   try {
     if (typeof window === 'undefined') return
     localStorage.setItem(key, JSON.stringify(value))
