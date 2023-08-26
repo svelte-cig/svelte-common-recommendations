@@ -1,22 +1,27 @@
 <script lang="ts">
-  import Button from './Button.svelte'
-  import type { Events } from './spreadEvents'
-  const events: Events = {
+  import CustomButton from './CustomButton.svelte'
+  import PlatformButton from './PlatformButton.svelte'
+  import type { PlatformEventMap } from './spreadEvents'
+
+  const platformEvents: PlatformEventMap = {
     click: () => console.log('Clicked'),
     mouseover: () => console.log('Hovered'),
-    mycustomevent: () => console.log('My custom event has been triggered'),
-  }
-
-  const props = {
-    click: () => console.log('clicked'),
   }
 </script>
 
-<button {...props}>
-  <span>Click me (dsl)</span>
-</button>
-<br />
+<PlatformButton events={platformEvents}>
+  <span>Click me</span>
+</PlatformButton>
 
-<!-- <Button {events}>
-<span>Click me</span>
-</Button> -->
+<CustomButton
+  events={{
+    'my-custom-event': e => console.log(e),
+  }}
+>
+  <span>Click me</span>
+</CustomButton>
+
+<!-- this SHOULD complain, saying types don't match. -->
+<CustomButton events={platformEvents}>
+  <span>Click me</span>
+</CustomButton>
