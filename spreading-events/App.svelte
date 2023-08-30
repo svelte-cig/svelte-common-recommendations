@@ -1,5 +1,5 @@
 <script lang="ts">
-  import CustomButton from './CustomButton.svelte'
+  import CustomButton, { type CustomButtonEvents } from './CustomButton.svelte'
   import PlatformButton from './PlatformButton.svelte'
   import type { PlatformEventMap } from './spreadEvents'
 
@@ -7,6 +7,13 @@
     click: () => console.log('Clicked'),
     mouseover: () => console.log('Hovered'),
   }
+
+  let events: CustomButtonEvents
+
+  document.addEventListener('click', e => {
+    // Should intellisense warn that `my-custom-event` could be missing here?
+    events['my-custom-event'](e)
+  })
 </script>
 
 <PlatformButton events={platformEvents}>
@@ -23,5 +30,9 @@
 
 <!-- this SHOULD complain, saying types don't match. -->
 <CustomButton events={platformEvents}>
+  <span>Click me</span>
+</CustomButton>
+
+<CustomButton bind:events>
   <span>Click me</span>
 </CustomButton>
