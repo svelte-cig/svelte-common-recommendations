@@ -1,6 +1,6 @@
 # Verb Components
 
-Use Svelte's DSL to its full extend to create a fluent api.
+Use Svelte's DSL ([Domain Specific Language](https://en.wikipedia.org/wiki/Domain-specific_language)) to its full extent to create a fluent api.
 
 The Svelte DSL is just an abstraction of plain JS, meaning no matter how many components you create and wrap, in the end they all compile to JS.
 
