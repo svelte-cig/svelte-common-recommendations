@@ -26,7 +26,7 @@ We'll be using a `login.svelte` component and an `invoke.svelte` component as ex
   <slot using={{ result }} />
 {/await}
 ```
-
+Whenever this components mounts to the dom it invokes `callback` and optionally allows you to retrieve the result using `let:using={{result}}` from within `<slot/>`.
 
 ```svelte
 <!-- login.svelte -->
@@ -70,8 +70,11 @@ We'll be using a `login.svelte` component and an `invoke.svelte` component as ex
     {/if}
 {/if}
 ```
+Once again, when the user is retrieved, you provide it to the `<slot />` so that the component user may retrieve it using `let:using={{user}}`.
 
-Use this verb component to guard your pages behind a login form and also obtain the logged in user fluently instead of using global stores.
+But way before that hapens you obviously have to render a login form and manage any state the component user shouldn't have to worry about, like errors, promisses, loading spinners/text and so on.
+
+As a result you can use this _verb_ component to guard your pages behind a login form and also obtain the logged in user fluently instead of using global stores or binding some external variable.
 
 ```svelte
 <Login let:using={{ user }}>
@@ -85,3 +88,6 @@ Use this verb component to guard your pages behind a login form and also obtain 
 ```
 
 This is how the Svelte DSL helps you manage state using verbs, manage errors through [unsafe](./unsafe.md) results, and provide a [discoverable component api](https://developers.redhat.com/articles/2022/10/06/how-make-your-apis-more-discoverable) through [compound_components](./compound_components.md).
+
+> **Note**\
+> If you're a fan of fancy words like [inversion of control](https://en.wikipedia.org/wiki/Inversion_of_control) this should be very familiar to you.
