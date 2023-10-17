@@ -70,7 +70,7 @@ Then send your requests from your svelte template
 ```svelte
 {#await http.get("/articles")}
     <span>Loading...</span>
-{#then [result, error]}
+{:then [result, error]}
     {#if error}
         <span>{error.message}</span>
     {:else}
