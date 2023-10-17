@@ -81,16 +81,17 @@ Then send your requests from your svelte template
 
 This way you will always be aware which function calls can error out (by checking if the result type is `Unsafe`) and you're not required to wrap your plain JS code in `try/catch` and nest your code into oblivion.
 
-> **Note**\
-> The same http request example using plain JS
-> ```js
-> async function find_articles(){
->     const [result, error] = await http.get("/artcles")
->     if(error){
->         console.warn(error.message)
->         return []
->     }
-> 
->     return result
-> }
-> ```
+### Using plain JS
+
+The same http request cann be solved in plain JS like so
+```js
+async function find_articles(){
+    const [result, error] = await http.get("/artcles")
+    if(error){
+        console.warn(error.message)
+        return []
+   }
+
+    return result
+}
+```
