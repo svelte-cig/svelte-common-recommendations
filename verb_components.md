@@ -2,7 +2,7 @@
 
 Use Svelte's DSL ([Domain Specific Language](https://en.wikipedia.org/wiki/Domain-specific_language)) to its full extent to create a fluent api.
 
-The Svelte DSL is just an abstraction of plain JS, meaning no matter how many components you create and wrap, in the end they all compile to JS.
+The Svelte DSL is just an abstraction over plain JS and no matter how many components you create and wrap.
 
 You should make use of that detail and delegate calculations and IO to your components as if they were functions or verbs.
 
