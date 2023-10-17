@@ -1,8 +1,0 @@
-/package
-/dist
-/pnpm-lock.yaml
-node_modules
-.idea
-.sourcemaps
-*.map
-.DS_Store
