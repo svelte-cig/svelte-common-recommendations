@@ -15,7 +15,7 @@ Imagine something like a `Card` component which expects `CardSection`s as childr
     </Card>
 ```
 
-Following a *compound components* strategy will allow you (_the author_) to give meaningful hints to the component user regarding any sub components and sections of the component.
+Following a *compound components* strategy will allow you (_the author_) to give meaningful hints to the developer regarding any sub components and sections of the component.
 
 The previous `Card` component can be solved using compound components like so
 
