@@ -26,7 +26,7 @@ We'll be using a `login.svelte` component and an `invoke.svelte` component as ex
   <slot using={{ result }} />
 {/await}
 ```
-Whenever this components mounts to the dom it invokes `callback` and optionally allows you to retrieve the result using `let:using={{result}}` from within `<slot/>`.
+Whenever this component mounts to the dom it invokes `callback` and optionally allows you to retrieve the result using `let:using={{result}}` from within `<slot/>`.
 
 ```svelte
 <!-- login.svelte -->
@@ -70,11 +70,11 @@ Whenever this components mounts to the dom it invokes `callback` and optionally 
     {/if}
 {/if}
 ```
-Once again, when the user is retrieved, you provide it to the `<slot />` so that the component user may retrieve it using `let:using={{user}}`.
+Once again, when the user is found, you provide it to the `<slot />` so that the developer may retrieve it using `let:using={{user}}`.
 
-But way before that hapens you obviously have to render a login form and manage any state the component user shouldn't have to worry about, like errors, promisses, loading spinners/text and so on.
+But way before that happens you obviously have to render a login form and manage any state the component user shouldn't have to worry about, like errors, promisses, loading spinners/text and so on.
 
-As a result you can use this _verb_ component to guard your pages behind a login form and also obtain the logged in user fluently instead of using global stores or binding some external variable.
+As a result the developer can use this _verb_ component to guard their pages behind a login form and also obtain the logged in user fluently instead of using global stores or binding some external variable.
 
 ```svelte
 <Login let:using={{ user }}>
