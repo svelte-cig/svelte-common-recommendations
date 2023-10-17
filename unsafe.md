@@ -36,7 +36,7 @@ export function ok(value) {
 }
 ```
 
-Wrap your http client to return `Unsafe<T>` instead of `throw`ing `Error`s
+Wrap your http client (**or any other critical piece of code**) to return `Unsafe<T>` instead of `throw`ing `Error`s
 ```js
 /**
  * @template [T =  any]
