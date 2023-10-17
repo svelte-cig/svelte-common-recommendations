@@ -83,7 +83,7 @@ This way you will always be aware which function calls can error out (by checkin
 
 ### Using plain JS
 
-The same http request cann be solved in plain JS like so
+The same http request can be solved in plain JS like so
 ```js
 async function find_articles(){
     const [result, error] = await http.get("/artcles")
