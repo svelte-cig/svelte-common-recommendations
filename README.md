@@ -7,7 +7,7 @@ Svelte Common Recommendations is a set of documents recommending strategies and 
 
 | Description | Links |
 |-----|-----|
-| Verb Components | [GitHub](./data_components.md) |
+| Verb Components | [GitHub](./verb_components.md) |
 | Invoke Component | [GitHub](./invoke_component.md) |
 | Compund Components | [GitHub](./compound_components.md) |
 | Unsafe | [GitHub](./unsafe.md) |
