@@ -1,4 +1,4 @@
-# Data Components
+# Verb Components
 
 Use Svelte's DSL to its full extend to create a fluent api.
 
