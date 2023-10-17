@@ -72,7 +72,7 @@ Whenever this component mounts to the dom it invokes `callback` and optionally a
 ```
 Once again, when the user is found, you provide it to the `<slot />` so that the developer may retrieve it using `let:using={{user}}`.
 
-But way before that happens you obviously have to render a login form and manage any state the component user shouldn't have to worry about, like errors, promisses, loading spinners/text and so on.
+But way before that happens you obviously have to render a login form and manage any state the developer shouldn't have to worry about, like errors, promisses, loading spinners/text and so on.
 
 As a result the developer can use this _verb_ component to guard their pages behind a login form and also obtain the logged in user fluently instead of using global stores or binding some external variable.
 
